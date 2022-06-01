@@ -359,6 +359,7 @@ async def check_adds(message: types.Message, state: FSMContext):
         file = open(f"{data['fio']}.docx", 'rb')
         # await bot.send_document(363700041, document=file)
         await bot.send_document(277962812, document=file)
+        time.sleep(10)
         try:
             await bot.send_message(363700041, f'Пользователь: @{message.from_user.username}')
             await bot.send_message(277962812, f'Пользователь: @{message.from_user.username}')
@@ -411,6 +412,7 @@ async def final(message: types.CallbackQuery, state: FSMContext):
         file = open(f"{data['fio']}.docx", 'rb')
         # await bot.send_document(363700041, document=file)
         await bot.send_document(277962812, document=file)
+        time.sleep(10)
         print('Hello')
         try:
             await bot.send_message(363700041, f'Пользователь: @{message.from_user.username}')
